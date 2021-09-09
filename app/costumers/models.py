@@ -10,5 +10,5 @@ class Costumer(models.Model):
     company=models.CharField(max_length=100)
     city=models.CharField(max_length=100)
     title=models.CharField(max_length=100)
-    latitude=models.FloatField()
-    longitude=models.FloatField()
+    latitude=models.FloatField(null=True)
+    longitude=models.FloatField(null=True)

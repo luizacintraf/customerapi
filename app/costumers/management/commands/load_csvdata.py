@@ -1,7 +1,7 @@
 
 from django.core.management.base import BaseCommand
 from django.apps import apps
-import pandas
+import pandas as pd
 
 class Command(BaseCommand):
     help = 'Creating model objects according the file path specified'
@@ -17,4 +17,5 @@ class Command(BaseCommand):
         file_path='customers.csv'
         _model = apps.get_model('costumers', 'Costumer')
         _object_dict = pd.read_csv(file_path).to_dict(orient='records')
-        _object_dict.to_dict(orient='records')
+        for _object in _object_dict:
+            _model.objects.create(**_object)
