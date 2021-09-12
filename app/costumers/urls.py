@@ -15,8 +15,8 @@ costumer_detail = CostumerViewSet.as_view({
 
 
 urlpatterns = (
-    path('', costumer_list, name='costumer-list'),
-    path('<int:pk>', costumer_detail, name='costumer-detail'),
+    path('', costumer_list, name='customer-list'),
+    path('<int:pk>', costumer_detail, name='customer-detail'),
 )
 
 # urlpatterns = [
