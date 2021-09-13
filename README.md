@@ -27,11 +27,12 @@ These is a simple API to get customers infos, it has some functions to update th
 
 ```sh
 $ git clone https://github.com/luizacintraf/customerapi.git
+$ cd appcustomerapi
 $ virtualenv venv #create a virtual environment
 $ source venv/bin/activate #activate the environment
-(venv) $ cd app
 (venv) $ python -m pip install -U pip setuptools
 (venv) $ pip install -e .
+(venv) $ cd app
 (venv) $ python manage.py migrate
 ```
  
