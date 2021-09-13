@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('costumers', '0001_initial'),
+        ('customers', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='costumer',
+            model_name='Customer',
             name='latitude',
             field=models.FloatField(null=True),
         ),
         migrations.AlterField(
-            model_name='costumer',
+            model_name='Customer',
             name='longitude',
             field=models.FloatField(null=True),
         ),
