@@ -1,4 +1,4 @@
-# Django Simple API: Costumer API
+# Django Simple API: Customer API
 
 These is a simple API to get customers infos, it has some functions to update the database from a csv and add address coordinates
 
