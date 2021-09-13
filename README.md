@@ -1,6 +1,6 @@
 # Django Simple API: Costumer API
 
-These is a simple API to get costumers infos, it has some functions to update the database from a csv and add address coordinates
+These is a simple API to get customers infos, it has some functions to update the database from a csv and add address coordinates
 
 ## Table of Contents
 
