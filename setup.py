@@ -23,7 +23,6 @@ if __name__ == "__main__":
             'MarkupSafe==2.0.1',
             'numpy==1.21.2',
             'packaging==21.0',
-            'pandarallel==1.5.2',
             'pandas==1.3.2',
             'pyparsing==2.4.7',
             'python-dateutil==2.8.2',
