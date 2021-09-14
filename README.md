@@ -27,9 +27,9 @@ These is a simple API to get customers infos, it has some functions to update th
 
 ```sh
 $ git clone https://github.com/luizacintraf/customerapi.git
-$ cd appcustomerapi
+$ cd customerapi
 $ virtualenv venv #create a virtual environment
-$ source venv/bin/activate #activate the environment
+$ source venv/bin/activate #activate the environment or venv\Scripts\activate for windows
 (venv) $ python -m pip install -U pip setuptools
 (venv) $ pip install -e .
 (venv) $ cd app
@@ -41,6 +41,7 @@ $ source venv/bin/activate #activate the environment
 * First you need to create a .env file as the example.env and add your API_KEY
 * If you will use the Customer model and the customer.csv to setup the database:
 ```sh
+(venv) $ set MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
 (venv) $ python manage.py load_csvdata --path=customers.csv --model_name=Customer --app_name=customers
 (venv) $ python manage.py add_coordinates --model_name=Customer --app_name=customers --address_field=city --lat=latitude --lng=longitude
 ```
@@ -57,7 +58,7 @@ It will open a page where you can perform get requests from costumer table
 ## Tests
 
 ```sh
-(venv)$ python manage.py test costumers
+(venv)$ python manage.py test customers
 ```
 
 ## Built with

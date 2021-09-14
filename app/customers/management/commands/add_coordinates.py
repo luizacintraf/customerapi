@@ -18,10 +18,13 @@ class Command(BaseCommand):
             [tupple]: latitude, longitude of the given address
         """        
         api_key = os.environ['MAPS_API_KEY'] #api key for google maps api saved in environment variables
-        response = requests.get(
-            f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}").json()
-        coordinates = response['results'][0]['geometry']['location']
-        return coordinates['lat'], coordinates['lng']
+        try: 
+            response = requests.get(f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}").json()
+            coordinates = response['results'][0]['geometry']['location']
+            return coordinates['lat'], coordinates['lng']
+        except:
+            return 0,0
+        
 
     def add_arguments(self, parser):
         """
