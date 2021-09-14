@@ -41,7 +41,7 @@ $ source venv/bin/activate #activate the environment or venv\Scripts\activate fo
 * First you need to create a .env file as the example.env and add your API_KEY
 * If you will use the Customer model and the customer.csv to setup the database:
 ```sh
-(venv) $ set MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+(venv) $ export MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY #set environemnt variable or set MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY for windows
 (venv) $ python manage.py load_csvdata --path=customers.csv --model_name=Customer --app_name=customers
 (venv) $ python manage.py add_coordinates --model_name=Customer --app_name=customers --address_field=city --lat=latitude --lng=longitude
 ```
